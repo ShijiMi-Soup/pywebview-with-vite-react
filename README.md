@@ -4,7 +4,7 @@
 
 This project includes code from a project by Roman, used under the BSD 3-Clause License.
 
-Copyright (c) 2020, Roman
+Copyright (c) 2020, Roman\
 All rights reserved.
 
 
