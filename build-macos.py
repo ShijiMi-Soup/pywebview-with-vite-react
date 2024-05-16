@@ -22,7 +22,7 @@ DATA_FILES = tree("gui")
 OPTIONS = {
     "argv_emulation": False,
     "strip": False,
-    # "iconfile": "backend/assets/logo.icns",
+    "iconfile": "backend/assets/logo.icns",
     "packages": ["WebKit", "Foundation", "webview"],
     "plist": {"NSRequiresAquaSystemAppearance": False},
     "resources": DATA_FILES,
