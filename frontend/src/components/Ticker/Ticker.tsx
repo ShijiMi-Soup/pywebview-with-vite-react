@@ -10,7 +10,7 @@ export function Ticker() {
         window.pywebview.state = {};
       }
 
-      // @ts-expect-error 'window.pywebview.state' is of type 'unknown'.ts(18046)
+      // @ts-expect-error This is a custom state
       window.pywebview.state.setTicker = setTicker;
     };
 
