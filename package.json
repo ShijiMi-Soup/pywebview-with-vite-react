@@ -17,6 +17,18 @@
     "start": "npm run frontend:dev && run-script-os",
     "start:default": "./venv/bin/python backend/index.py"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShijiMi-Soup/pywebview-with-vite-react"
+  },
+  "keywords": [
+    "pywebview",
+    "vite",
+    "react",
+    "python",
+    "javascript",
+    "typescript"
+  ],
   "author": "Takahiro Yoshikawa",
   "license": "ISC",
   "licenses": [
