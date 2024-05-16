@@ -12,7 +12,7 @@
     "clean:default": "rm -rf dist 2>/dev/null; rm -rf gui 2>/dev/null; rm -rf build 2>/dev/null; ",
     "clean:windows": "if exist dist rd /S /Q dist & if exist build rd /S /Q build & if exist gui rd /S /Q gui",
     "dev": "cd frontend && npm run dev",
-    "init": "npm run init-frontend",
+    "init": "npm install && npm run init-frontend",
     "init-frontend": "cd frontend && npm install",
     "start": "npm run frontend:dev && run-script-os",
     "start:default": "./venv/bin/python backend/index.py"
