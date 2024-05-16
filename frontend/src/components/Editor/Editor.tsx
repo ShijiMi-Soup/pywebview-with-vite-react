@@ -20,7 +20,6 @@ export function Editor() {
       <button
         className="button"
         onClick={() => {
-          // @ts-expect-error TS2339: Property 'pywebview' does not exist on type 'Window & typeof globalThis'.
           window.pywebview.api.save_content(content);
         }}
       >
