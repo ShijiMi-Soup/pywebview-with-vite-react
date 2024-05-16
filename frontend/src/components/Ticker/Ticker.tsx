@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./Ticker.scss";
+import "./Ticker.css";
 
 export function Ticker() {
   const [ticker, setTicker] = useState("");

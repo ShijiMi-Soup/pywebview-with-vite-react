@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Editor.scss";
+import "./Editor.css";
 
 export function Editor() {
   const [content, saveContent] = useState(
