@@ -20,6 +20,10 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
+### Linux
+
+- Linux support is not provided but you can mimic the [original boiller plate](https://github.com/r0x0r/pywebview-react-boilerplate)
+
 ## Run in dev mode
 
 ### Only the frontend
@@ -39,10 +43,6 @@ npm run start
 ```shell
 npm run build
 ```
-
-### Linux
-
-- I didn't provide support for linux but you can mimic the [original boiller plate](https://github.com/r0x0r/pywebview-react-boilerplate)
 
 ## License
 
