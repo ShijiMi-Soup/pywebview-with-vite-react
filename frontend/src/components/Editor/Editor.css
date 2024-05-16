@@ -1,16 +1,16 @@
-.header-container .editor-container {
+.editor-container {
   padding: 0 3rem;
   text-align: center;
 }
 
-.header-container .textarea {
+.editor-container .textarea {
   width: 30rem;
   height: 10rem;
   margin: 2rem;
   color: #2c3e50;
 }
 
-.header-container .button {
+.editor-container .button {
   display: inline-block;
   font-size: 1.2rem;
   color: #fff;
@@ -22,6 +22,6 @@
   border-bottom: 1px solid #389d70;
 }
 
-.header-container .button:hover {
+.editor-container .button:hover {
   background-color: #4abf8a;
 }

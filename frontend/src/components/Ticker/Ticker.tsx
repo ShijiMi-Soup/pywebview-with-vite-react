@@ -5,8 +5,6 @@ export function Ticker() {
   const [ticker, setTicker] = useState("");
 
   useEffect(() => {
-    console.log("Hello from Ticker component");
-
     const handlePywebviewReady = () => {
       // @ts-expect-error TS2339: Property 'pywebview' does not exist on type 'Window & typeof globalThis'.
       if (!window.pywebview.state) {
