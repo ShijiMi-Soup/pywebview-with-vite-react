@@ -4,20 +4,21 @@ from time import time
 
 import webview
 
-# class Api:
-#     def fullscreen(self):
-#         webview.windows[0].toggle_fullscreen()
 
-#     def save_content(self, content):
-#         filename = webview.windows[0].create_file_dialog(webview.SAVE_DIALOG)
-#         if not filename:
-#             return
+class Api:
+    def fullscreen(self):
+        webview.windows[0].toggle_fullscreen()
 
-#         with open(filename, "w") as f:
-#             f.write(content)
+    def save_content(self, content):
+        filename = webview.windows[0].create_file_dialog(webview.SAVE_DIALOG)
+        if not filename:
+            return
 
-#     def ls(self):
-#         return os.listdir(".")
+        with open(filename, "w") as f:
+            f.write(content)
+
+    def ls(self):
+        return os.listdir(".")
 
 
 def get_entrypoint():
@@ -67,6 +68,5 @@ def update_ticker():
 
 
 if __name__ == "__main__":
-    window = webview.create_window("pywebview-react boilerplate", entry)
-    # window = webview.create_window("pywebview-react boilerplate", entry, js_api=Api())
+    window = webview.create_window("pywebview-react boilerplate", entry, js_api=Api())
     webview.start(update_ticker, debug=True)
