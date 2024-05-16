@@ -1,0 +1,6 @@
+venv
+gui
+build
+dist
+
+.DS_Store

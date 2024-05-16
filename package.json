@@ -1,0 +1,22 @@
+{
+  "name": "with-vite-react",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && npm run frontend:prod && run-script-os",
+    "build:macos": "./venv/bin/python build-macos.py py2app",
+    "clean": "run-script-os",
+    "clean:default": "rm -rf dist 2>/dev/null; rm -rf gui 2>/dev/null; rm -rf build 2>/dev/null; ",
+    "clean:windows": "if exist dist rd /S /Q dist & if exist build rd /S /Q build & if exist gui rd /S /Q gui",
+    "frontend:dev": "cd frontend && npm run build",
+    "frontend:prod": "cd frontend && npm run build",
+    "init": "npm run init-frontend",
+    "init-frontend": "cd frontend && npm install"
+  },
+  "author": "Takahiro Yoshikawa",
+  "license": "ISC",
+  "devDependencies": {
+    "run-script-os": "^1.1.6"
+  }
+}
