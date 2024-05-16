@@ -20,6 +20,26 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
+## Run in dev mode
+
+### Only the frontend
+
+```shell
+npm run dev
+```
+
+### Build the frontend and run the backend in dev mode
+
+```shell
+npm run start
+```
+
+## Build
+
+```shell
+npm run build
+```
+
 ### Linux
 
 - I didn't provide support for linux but you can mimic the [original boiller plate](https://github.com/r0x0r/pywebview-react-boilerplate)

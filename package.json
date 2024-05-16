@@ -14,7 +14,8 @@
     "dev": "cd frontend && npm run dev",
     "init": "npm install && npm run init-frontend",
     "init-frontend": "cd frontend && npm install",
-    "start": "npm run frontend:dev && run-script-os",
+    "start": "npm run build-frontend && run-script-os",
+    "start:windows": ".\\venv\\Scripts\\python src\\index.py",
     "start:default": "./venv/bin/python backend/index.py"
   },
   "repository": {
