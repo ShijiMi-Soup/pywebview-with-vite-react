@@ -30,11 +30,11 @@
     "typescript"
   ],
   "author": "Takahiro Yoshikawa",
-  "license": "ISC",
+  "license": "BSD-3-Clause",
   "licenses": [
     {
-      "type": "ISC",
-      "url": "https://opensource.org/licenses/ISC"
+      "type": "BSD-3-Clause",
+      "url": "https://opensource.org/licenses/BSD-3-Clause"
     },
     {
       "type": "BSD-3-Clause",
