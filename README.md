@@ -7,6 +7,11 @@ Stack is based on pywebview, React, Vite bundler, pyinstaller (Windows/Linux) an
 - Python 3
 - Node
 
+## Tutorials
+
+- English: https://medium.com/@takahiro.zt899/creating-a-desktop-app-with-pywebview-vite-and-react-7785db86490f
+- Japanese: https://qiita.com/ShijiMi-Soup/items/1f5e2b542884ca4a279f
+
 ## Initialization
 
 ### Mac OS
