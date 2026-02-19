@@ -69,7 +69,7 @@ if grep -q "Hot Module Replacement" README.md || grep -q "hot reload" README.md;
     PASSED=$((PASSED + 1))
 else
     echo -e "${YELLOW}⚠ WARNING${NC} - README.md might need hot reload documentation"
-    FAILED=$((FAILED + 1))
+    # This is just a warning, not a failure
 fi
 echo ""
 

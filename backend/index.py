@@ -75,7 +75,7 @@ def update_ticker():
                 window.evaluate_js(
                     'window.pywebview.state.setTicker("%d")' % time()
                 )
-        except Exception:
+        except (AttributeError, webview.errors.WebViewException):
             # Window not ready yet, will retry on next interval
             pass
 
