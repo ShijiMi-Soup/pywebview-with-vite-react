@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 # Test script for hot reload functionality
 # This script verifies that the dev mode implementation is working correctly
