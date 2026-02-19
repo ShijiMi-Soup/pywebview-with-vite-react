@@ -73,6 +73,17 @@ else
 fi
 echo ""
 
+# Test 5.5: Check if window.loaded check is present
+echo "Test 5.5: Checking if backend has window.loaded check..."
+if grep -q "if window.loaded:" backend/index.py; then
+    echo -e "${GREEN}✓ PASSED${NC} - Window loaded check found in backend/index.py"
+    PASSED=$((PASSED + 1))
+else
+    echo -e "${RED}✗ FAILED${NC} - Window loaded check not found (race condition fix missing)"
+    FAILED=$((FAILED + 1))
+fi
+echo ""
+
 # Test 6: Check if venv exists (optional - for local testing)
 echo "Test 6: Checking if Python virtual environment exists (optional)..."
 if [ -d "venv" ]; then
