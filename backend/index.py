@@ -68,9 +68,16 @@ entry = get_entrypoint()
 @set_interval(1)
 def update_ticker():
     if len(webview.windows) > 0:
-        webview.windows[0].evaluate_js(
-            'window.pywebview.state.setTicker("%d")' % time()
-        )
+        try:
+            # Check if window is loaded before trying to evaluate JS
+            window = webview.windows[0]
+            if window.loaded:
+                window.evaluate_js(
+                    'window.pywebview.state.setTicker("%d")' % time()
+                )
+        except Exception:
+            # Window not ready yet, will retry on next interval
+            pass
 
 
 if __name__ == "__main__":

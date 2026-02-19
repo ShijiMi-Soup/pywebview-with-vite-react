@@ -154,6 +154,17 @@ set PYWEBVIEW_DEV=1 && .\venv\Scripts\python backend\index.py --dev
    ```
 3. Update backend/index.py to match the new port
 
+### Issue: "Main window failed to start" error
+
+**Cause:** The window hasn't finished loading when the ticker tries to update
+
+**Solution:** This has been fixed in the code. The `update_ticker` function now:
+1. Checks if the window is loaded before calling `evaluate_js`
+2. Gracefully handles exceptions when the window isn't ready
+3. Automatically retries on the next interval (every 1 second)
+
+If you still see this error, ensure you're using the latest version of the code.
+
 ## Performance
 
 ### Dev Mode (with HMR)
