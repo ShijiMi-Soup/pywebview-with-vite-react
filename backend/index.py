@@ -1,4 +1,5 @@
 import os
+import sys
 import threading
 from time import time
 
@@ -22,6 +23,11 @@ class Api:
 
 
 def get_entrypoint():
+    # Check if running in dev mode with hot reload
+    if '--dev' in sys.argv or os.environ.get('PYWEBVIEW_DEV') == '1':
+        return 'http://localhost:5173'
+    
+    # Production mode - load from static files
     def exists(path):
         return os.path.exists(os.path.join(os.path.dirname(__file__), path))
 
@@ -62,9 +68,16 @@ entry = get_entrypoint()
 @set_interval(1)
 def update_ticker():
     if len(webview.windows) > 0:
-        webview.windows[0].evaluate_js(
-            'window.pywebview.state.setTicker("%d")' % time()
-        )
+        try:
+            # Check if window is loaded before trying to evaluate JS
+            window = webview.windows[0]
+            if window.loaded:
+                window.evaluate_js(
+                    'window.pywebview.state.setTicker("%d")' % time()
+                )
+        except (AttributeError, webview.errors.WebViewException):
+            # Window not ready yet, will retry on next interval
+            pass
 
 
 if __name__ == "__main__":

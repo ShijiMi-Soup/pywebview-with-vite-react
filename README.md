@@ -38,17 +38,38 @@ pip install -r requirements.txt
 
 ## Run in dev mode
 
-### Only the frontend
+### Frontend only (without pywebview)
 
 ```shell
 npm run dev
 ```
 
-### Build the frontend and run the backend in dev mode
+This starts the Vite dev server on `http://localhost:5173`. Useful for rapid frontend development, but pywebview APIs won't be available.
+
+### Full app with hot reload (recommended for development)
+
+**Terminal 1 - Start Vite dev server:**
+```shell
+npm run dev
+```
+
+**Terminal 2 - Start Python backend in dev mode:**
+```shell
+npm run dev:backend
+```
+
+The Python backend will load the frontend from the Vite dev server (`http://localhost:5173`), enabling:
+- ✨ **Hot Module Replacement (HMR)** - Changes appear instantly without full page reload
+- 🔄 **React Fast Refresh** - Component state is preserved during updates
+- 🚀 **Instant feedback** - No need to rebuild or restart the app
+
+### Production mode (no hot reload)
 
 ```shell
 npm run start
 ```
+
+This builds the frontend and runs the backend with static files (traditional mode, no hot reload).
 
 ## Build
 
