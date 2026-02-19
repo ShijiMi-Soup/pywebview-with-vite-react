@@ -1,4 +1,5 @@
 import os
+import sys
 import threading
 from time import time
 
@@ -22,6 +23,11 @@ class Api:
 
 
 def get_entrypoint():
+    # Check if running in dev mode with hot reload
+    if '--dev' in sys.argv or os.environ.get('PYWEBVIEW_DEV') == '1':
+        return 'http://localhost:5173'
+    
+    # Production mode - load from static files
     def exists(path):
         return os.path.exists(os.path.join(os.path.dirname(__file__), path))
 
